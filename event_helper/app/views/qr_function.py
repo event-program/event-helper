@@ -5,8 +5,8 @@ from ..models import Participant, Event
 
 
 def qr_view(request):
-    if request.method == 'GET':
-        user_id = request.GET.get('user_id', '')
+    if request.method == 'POST':
+        user_id = request.POST.get('user_id', '')
         now_user = get_object_or_404(Participant, user_id=user_id)
         response = requests.get("https://pierre2106j-qrcode.p.rapidapi.com/api?type=text&text={0}".format(user_id),
                                headers={
@@ -15,7 +15,7 @@ def qr_view(request):
                                }
                                )
         now_user.qr_code = response.text
-        print(now_user.qr_code)
+        #print(now_user.qr_code)
         return JsonResponse({'status_code': '200', 'qr_image':response.text})
     else:
         return HttpResponseBadRequest()
