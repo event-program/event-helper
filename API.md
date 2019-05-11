@@ -9,3 +9,69 @@
 | POST   | `/qr`        | User ID | PNG    | Create QR Code     |
 | POST   | `/gps`       | GPS     |        | GPS Device Decoder |
 | GET    | `/translate` | Text    | Text   | Google Translate   |
+
+
+
+
+
+```json
+// GET /user request
+{
+    "사용자" : "xxxxxxxx"
+}
+```
+
+```json
+// GET /user response
+{
+    "user_name": "사용자이름",
+    "QR_code" : "img url링크"
+    "item_list": [
+    	{
+			"gimbap": 1,
+    		"NCE token": 0,
+    		"rakuten credit": 0
+    		// optional 정보. 추가내용에 따라 변동가능.
+		}
+    ]
+}
+```
+
+
+
+```json
+//POST /user request
+{
+    "user_name": "xxx",
+    "user_phone": "xxx"
+}
+```
+
+```json
+//POST /user response
+{
+    "status_code": "200"
+    	// 200 or 400
+}
+```
+
+
+
+
+
+```json
+//POST /qr request
+{
+    "user_id": "xxxxxxx"
+    	// (이름+전화번호)의 hash값
+}
+```
+
+```json
+//POST /qr response
+{
+    "qr_image": ".png파일"
+     	//"https://~~~.png"
+}
+```
+
