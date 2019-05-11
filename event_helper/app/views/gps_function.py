@@ -1,8 +1,7 @@
 from django.http import JsonResponse, HttpResponseNotFound
 from django.shortcuts import get_object_or_404
 from ..models import Participant, Event
-from . import qr_view
-
+from .qr_function import qr_view
 def gps_view(request):
     # return Dict.
 
