@@ -1,5 +1,4 @@
 from django.http import JsonResponse
-from models import Participant
 import json
 
 def views(request):
@@ -14,9 +13,6 @@ def views(request):
     }
     """
 
-    req = json.loads(request.text)
-    participant_instance = Participant(id=request['id'],name=request['name'] \
-            , phone=request['phonenumber'], language=request['language'], \
-                country=request['country'])
 
-    participant_instance.save()
+
+    return 200
