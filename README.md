@@ -15,7 +15,9 @@
 >
 > 3. 번역(메세지 영어->한글)
 >
-> > <https://english.api.rakuten.net/dimashirokov/api/GoogleTranslate>
+> > ~~https://english.api.rakuten.net/dimashirokov/api/GoogleTranslate~~ 작동안함
+>
+> > <https://english.api.rakuten.net/microsoft-azure/api/microsoft-text-translation>
 >
 > 4. 메세지(twillo)
 >
