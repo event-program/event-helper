@@ -17,7 +17,7 @@
 ```json
 // GET /user request
 {
-    "사용자" : "xxxxxxxx"
+    "user_id" : "xxxxxxxx"
 }
 ```
 
