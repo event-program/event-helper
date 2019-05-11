@@ -23,5 +23,6 @@ urlpatterns = [
     path('gps/', views.gps_view),
     # path('translate/',views.translate_view),
     path('event/', views.event_view),
-    path('user_form/',views.user_forms_create)
+    path('user_form/',views.user_forms_create),
+    path('alert/',views.alert_view)
 ]
