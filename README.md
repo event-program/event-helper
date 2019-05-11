@@ -14,8 +14,7 @@
 >
 > 3. 번역(메세지 영어->한글)
 >
-> > <https://english.api.rakuten.net/microsoft-azure/api/microsoft-text-translation>
-
+> > https://rapidapi.com/microsoft-azure/api/microsoft-text-translation-3-0?endpoint=5c4fab89e4b062e1a150db11
 
 
 
