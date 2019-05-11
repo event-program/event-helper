@@ -116,3 +116,5 @@ event_helper/db.sqlite3
 
 event_helper/event_helper/SECRET_KEY.json
 
+
+\.idea/
