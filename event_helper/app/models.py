@@ -46,4 +46,15 @@ class Participant(models.Model):
 
 class Event(models.Model):
     entry = models.ManyToManyField(Participant)
+    name = models.CharField(max_length='15')
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
+    location = models.CharField(max_length='30')
+    description = models.TextField()
+
+    question_5 = models.CharField(max_length='50', blank=True)
+    question_6 = models.CharField(max_length='50', blank=True)
+    question_7 = models.CharField(max_length='50', blank=True)
+    question_8 = models.CharField(max_length='50', blank=True)
+    question_9 = models.CharField(max_length='50', blank=True)
 
