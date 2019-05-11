@@ -7,7 +7,9 @@
 
 > 1. Qr코드생성 & 읽는거
 >
-> > <https://english.api.rakuten.net/qrcode-monkey/api/custom-qr-code-with-logo>
+> > ~~https://english.api.rakuten.net/qrcode-monkey/api/custom-qr-code-with-logo~~ 유료
+> 
+> > <https://english.api.rakuten.net/pierre2106j/api/qrcode> 무료
 >
 > 2. GPS decode(gps데이터를 위도,경도 가져오기 위해)
 >
