@@ -37,9 +37,6 @@ class Participant(models.Model):
     def __str__(self):
         return self.user_id
 
-    def save(self):
-        super(Participant, self).save()
-
 
 class Event(models.Model):
     entry = models.ManyToManyField(Participant)
@@ -54,4 +51,7 @@ class Event(models.Model):
     question_7 = models.CharField(max_length=50, blank=True)
     question_8 = models.CharField(max_length=50, blank=True)
     question_9 = models.CharField(max_length=50, blank=True)
+
+    def __str__(self):
+        return self.name
 
