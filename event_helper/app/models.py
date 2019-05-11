@@ -38,7 +38,6 @@ class Participant(models.Model):
         return self.user_id
 
     def save(self):
-        self.id = self.username + self.phone
         super(Participant, self).save()
 
 
