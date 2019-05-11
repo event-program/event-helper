@@ -1,7 +1,8 @@
 from django.http import JsonResponse
-from django.shortcuts import get_object_or_404()
+from django.shortcuts import get_object_or_404
 
-def view(request):
+
+def gps_view(request):
     # return Dict.
 
     if request.method == "POST":

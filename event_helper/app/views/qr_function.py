@@ -1,10 +1,10 @@
 import requests
 from django.http import JsonResponse, HttpResponseBadRequest
 from django.shortcuts import get_object_or_404
-from .models import User, Event
+from ..models import Participant, Event
 
 
-def view(request):
+def qr_view(request):
     if request.method == 'GET':
         user_id = request.POST.get('user_id', '')
         now_user = get_object_or_404(User, user_id=user_id)

@@ -20,6 +20,7 @@ urlpatterns = [
     path('test/', views.test_view),
     path('user/',views.user_view),
     path('qr/',views.qr_view),
-    path('gps/', views.gps_view),
-    path('translate/',views.translate_view),
+    # path('gps/', views.gps_view),
+    # path('translate/',views.translate_view),
+    path('event/', views.event_view)
 ]
