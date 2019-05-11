@@ -3,9 +3,6 @@ from django.core.exceptions import ValidationError
 from django.contrib.auth.models import AbstractBaseUser
 
 
-class Event(models.Model):
-    pass
-
 class Alert(models.Model):
     noti_type = models.CharField(max_length=30)
     time = models.DateTimeField()
