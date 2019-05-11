@@ -77,7 +77,7 @@
 ```json
 //POST /gps request
 {
-    "longtitude": "52.135236",
+    "longitude": "52.135236",
     "latitude": "23.22121424
 }
 ```
