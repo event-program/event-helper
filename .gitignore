@@ -111,3 +111,4 @@ fabric.properties
 .history
 
 # End of https://www.gitignore.io/api/git,pycharm,visualstudiocode
+*.pyc
