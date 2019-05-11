@@ -1,0 +1,18 @@
+[
+    {
+        "model":"app.event",
+        "pk": 1,
+        "fields": {
+            "name": "정션X",
+            "start_date": "2019-05-10T19:19:00",
+            "end_date": "2019-05-12T18:00:00",
+            "location": "37.5355222 126.9595416",
+            "description": "Junction X Seoul",
+            "question_5": "대한민국",
+            "question_6": "서울특별시",
+            "question_7": "1995/05/05",
+            "question_8": "학생",
+            "question_9": ""
+        }
+    }
+]

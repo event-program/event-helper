@@ -35,7 +35,7 @@ class Participant(models.Model):
     is_staff = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.id
+        return self.user_id
 
     def save(self):
         self.id = self.username + self.phone

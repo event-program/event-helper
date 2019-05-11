@@ -8,12 +8,12 @@ from datetime import datetime
 
 def event_view(request):
     if request.method == 'GET':
-        event_name = request.GET.get('event', '')
-        now_event = Event.objects.filter(name=event_name)[0]
+        event_name = request.GET.get('event_name', '')
+        now_event = Event.objects.all().filter(name=event_name).first()
         return JsonResponse({
             'status_code': '200',
             'event_name': now_event.name,
-            'entry': [i.id for i in now_event.entry.all()],
+            'entry': [i.user_id for i in now_event.entry.all()],
             'start_date': now_event.start_date.strftime("%Y,%m,%d,%H,%M,%S"),
             'end_date': now_event.end_date.strftime("%Y,%m,%d,%H,%M,%S"),
             'location': now_event.location,
