@@ -1,22 +1,18 @@
 from django.http import JsonResponse
-from ..models import Participant
+from ..models import Participant, Event
+from django.views.decorators.csrf import csrf_exempt
 import json
 
-def views(request):
-    """
-    {
-        "event_name"
-        "name":"",
-        "id":"",
-        "phonenumber":"",
-        "language":"",
-        "country": "",
-    }
-    """
+@csrf_exempt
+def user_forms_create(request):
+    req = dict(json.loads(request.body.decode('utf-8')))
+    print(req)
+    print(req['country'])
+    participant_instance = Participant(id=str(req['id']), language=str(req['language']), country=str(req['country']), phone=str(req['phonenumber']))
 
-    req = json.loads(request.text)
-    participant_instance = Participant(id=request['id'],name=request['name'] \
-            , phone=request['phonenumber'], language=request['language'], \
-                country=request['country'])
+    #Ent = Event.objects.all().filter(name=req['event_name'])
+    #Ent.objects.entry.add(Participant)
 
     participant_instance.save()
+
+    return 200
