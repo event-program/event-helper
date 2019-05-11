@@ -14,7 +14,7 @@ class Alert(models.Model):
 
 class Alert(models.Model):
     Alert_type = models.CharField(max_length=2)
-    name = models.CharField(max_length=30)')
+    name = models.CharField(max_length=30)
     time = models.DateTimeField()
     location = models.CharField(max_length=30)
     description = models.TextField()
@@ -22,8 +22,6 @@ class Alert(models.Model):
 
 class Participant(models.Model):
     id = models.CharField(max_length=60,blank=True)
-
-    USERNAME_FIELD = 'id'
 
     username = models.CharField(max_length=30, blank=True)
     phone = models.CharField(max_length=30, blank=True)

@@ -7,7 +7,7 @@ from ..models import Participant, Event
 def qr_view(request):
     if request.method == 'GET':
         user_id = request.POST.get('user_id', '')
-        now_user = get_object_or_404(User, user_id=user_id)
+        now_user = get_object_or_404(Participant, id=user_id)
         response = requests.get("https://pierre2106j-qrcode.p.rapidapi.com/api?type=text&text={0}".format(user_id),
                                headers={
                                    "X-RapidAPI-Host": "pierre2106j-qrcode.p.rapidapi.com",
