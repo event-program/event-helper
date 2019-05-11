@@ -17,7 +17,8 @@
 ```json
 // GET /user request
 {
-    "사용자" : "xxxxxxxx"
+    "event_name": "이벤트네임",
+    "user_id" : "xxxxxxxx"
 }
 ```
 
@@ -42,6 +43,7 @@
 ```json
 //POST /user request
 {
+    "event_name": "이벤트네임",
     "user_name": "xxx",
     "user_phone": "xxx"
 }
@@ -55,13 +57,10 @@
 }
 ```
 
-
-
-
-
 ```json
 //POST /qr request
 {
+    "event_name": "이벤트네임",
     "user_id": "xxxxxxx"
     	// (이름+전화번호)의 hash값
 }
@@ -75,3 +74,36 @@
 }
 ```
 
+```json
+//POST /gps request
+{
+    "longtitude": "52.135236",
+    "latitude": "23.22121424
+}
+```
+
+```json
+//POST /gps response
+{
+    "status": 200
+}
+```
+
+
+-----
+
+
+```json
+ /translate request
+{
+    "text": "~~~~~~~~~~",
+    "lang_code": "언어코드 us, kr같은거"
+}
+```
+
+
+```json
+/translate response
+{
+    "translate_text": "~~번역된 언어"
+}
