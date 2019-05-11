@@ -1,4 +1,6 @@
 from django.db import models
+from django.core.exceptions import ValidationError
+from django.contrib.auth.models import AbstractBaseUser
 
 
 class Event(models.Model):
@@ -11,3 +13,37 @@ class Alert(models.Model):
     description = models.TextField()
 
 # Create your models here.
+
+
+class Alert(models.Model):
+    type = models.CharField(max_length='2')
+    name = models.CharField(max_length='30')
+    time = models.DateTimeField()
+    location = models.CharField(max_length='30')
+    description = models.TextField()
+
+
+class Participant(models.Model):
+    id = models.CharField(max_length='30',blank=True)
+
+    USERNAME_FIELD = 'id'
+
+    username = models.CharField(max_length='30', blank=True)
+    phone = models.CharField(max_length='30', blank=True)
+    language = models.CharField(max_length='30', blank=True)
+    country = models.CharField(max_length='30', blank=True)
+    question_5 = models.CharField(max_length='30', blank=True)
+    question_6 = models.CharField(max_length='30', blank=True)
+    question_7 = models.CharField(max_length='30', blank=True)
+    question_8 = models.CharField(max_length='30', blank=True)
+    question_9 = models.CharField(max_length='30', blank=True)
+    qr_code = models.TextField()
+    is_staff = models.BooleanField(default=False)
+
+    def save(self):
+        self.id = self.username + self.phone
+        super(Participant, self).save()
+
+class Event(models.Model):
+    entry = models.ManyToManyField(Participant)
+
