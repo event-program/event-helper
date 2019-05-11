@@ -13,8 +13,8 @@ class Alert(models.Model):
 
 
 class Alert(models.Model):
-    type = models.CharField(max_length=2)
-    name = models.CharField(max_length=30)
+    Alert_type = models.CharField(max_length=2)
+    name = models.CharField(max_length=30)')
     time = models.DateTimeField()
     location = models.CharField(max_length=30)
     description = models.TextField()
