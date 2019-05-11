@@ -21,8 +21,7 @@ class Alert(models.Model):
 
 
 class Participant(models.Model):
-    id = models.CharField(max_length=60,blank=True)
-
+    user_id = models.CharField(max_length=60,blank=True)
     username = models.CharField(max_length=30, blank=True)
     phone = models.CharField(max_length=30, blank=True)
     language = models.CharField(max_length=30, blank=True)

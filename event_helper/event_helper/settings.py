@@ -75,15 +75,10 @@ WSGI_APPLICATION = 'event_helper.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default':
-        {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'event_helper_server',
-            'USER': 'TEST2',
-            'PASSWORD': 'PASS',
-            'HOST': 'localhost',
-            'PORT': '',
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 

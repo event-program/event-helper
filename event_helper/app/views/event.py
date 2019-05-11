@@ -17,4 +17,4 @@ def event_view(request):
                                 'location': now_event.location,
                                 'description': now_event.description,
                             })
-    elif request.method == 'POST':
+    pass

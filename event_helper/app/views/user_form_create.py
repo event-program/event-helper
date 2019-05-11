@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from models import Participant
+from ..models import Participant
 import json
 
 def views(request):
