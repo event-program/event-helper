@@ -1,7 +1,7 @@
 import requests
 from django.http import JsonResponse, HttpResponseBadRequest
 from django.shortcuts import get_object_or_404
-from ..models import User, Event
+from .models import User, Event
 
 
 def view(request):
