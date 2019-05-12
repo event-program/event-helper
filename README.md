@@ -11,6 +11,9 @@
 > 
 > > <https://english.api.rakuten.net/pierre2106j/api/qrcode> 무료
 >
+> 2. OneSignal
+>
+> > https://english.api.rakuten.net/dimashirokov/api/OneSignal/details
 >
 > 3. 번역(메세지 영어->한글)
 >
