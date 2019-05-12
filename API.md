@@ -57,26 +57,11 @@
 }
 ```
 
-```json
-//POST /qr request
-{
-    "event_name": "이벤트네임",
-    "user_id": "xxxxxxx"
-    	// (이름+전화번호)의 hash값
-}
-```
-
-```json
-//POST /qr response
-{
-    "qr_image": ".png파일"
-     	//"https://~~~.png"
-}
-```
 
 ```json
 //POST /gps request
 {
+    "user_id": "XXXX",
     "longitude": "52.135236",
     "latitude": "23.22121424
 }
@@ -85,8 +70,9 @@
 ```json
 //POST /gps response
 {
-    "status": 200
-}
+    'status_code':'404',
+    'qr_image':'이밎URL' #QR코드 없을때,범위바깥일땐 빈칸.
+
 ```
 
 
@@ -107,3 +93,27 @@
 {
     "translate_text": "~~번역된 언어"
 }
+
+```
+
+
+```json
+/event request
+{
+	'event_name': "행사명"
+}
+```
+
+```json
+/event response
+{
+	'status_code':'200',
+	'event_name': '행사명',
+	'entry': '행사의 참가자들',
+	'start_date': '시작일자"%Y,%m,%d,%H,%M,%S"',
+	'end_date': '"%Y,%m,%d,%H,%M,%S"',
+	'location': '위도 경도',
+	'description': '행사설명'
+}
+```
+
